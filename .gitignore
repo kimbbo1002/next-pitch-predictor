@@ -1,5 +1,25 @@
 plan.md
+
+# environment
 .venv/
-__pycache__/
-*.csv
 .env
+
+# python
+__pycache__/
+*.pyc
+
+# jupyter
+.ipynb_checkpoints/
+
+# data
+data/
+*.parquet
+*.csv
+!reports/results/*.csv
+
+# models
+*.cbm
+*.pkl
+
+# OS
+.DS_Store

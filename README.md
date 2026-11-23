@@ -13,6 +13,9 @@ How accurately can we predict a pitcher's next pitch type, and how much does eac
 
 MLB Statcast pitch-level data (2025 regular season) via [pybaseball](https://github.com/jldbc/pybaseball).
 
+Column definitions and prediction-time availability:
+[docs/data_dictionary.md](docs/data_dictionary.md)
+
 Raw data is not committed; see *Reproducing* below.
 
 ## Project Structure

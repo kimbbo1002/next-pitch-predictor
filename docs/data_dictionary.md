@@ -33,7 +33,7 @@ Source: [Baseball Savant Statcast CSV docs](https://baseballsavant.mlb.com/csv-d
 | `game_pk` | `meta` | Unique Id for Game. |
 | `at_bat_number` | `meta` | Plate appearance number of the game. |
 | `pitch_number` | `before` | Total pitch number of the plate appearance. |
-| `pitch_name` | `after` | The name of the pitch derived from the Statast Data. |
+| `pitch_name` | `after` | The name of the pitch derived from the Statcast Data. |
 | `home_score` | `before` | Pre-pitch home score |
 | `away_score` | `before` | Pre-pitch away score |
 | `bat_score` | `before` | Pre-pitch bat team score |
@@ -41,10 +41,12 @@ Source: [Baseball Savant Statcast CSV docs](https://baseballsavant.mlb.com/csv-d
 | `post_home_score` | `after` | Post-pitch home score |
 | `post_away_score` | `after` | Post-pitch away score |
 | `post_bat_score` | `after` | Post-pitch bat team score |
+| `post_fld_score` | `after` | Post-pitch field team score |
 | `home_score_diff` | `before` | Home score minus Away score |
 | `bat_score_diff` | `before` | Batting team score less Pitching team score |
 | `n_thruorder_pitcher` | `before` | Pitcher times through the order |
 
 ## Excluded Columns
+- `pitcher_days_until_next_game` and `batter_days_until_next_game` are **future information** (up to 115 days ahead in sample) and must not be used.
 - All other ball-tracking (`release_*`, `pfx_*`, `plate_*`, `v*0`, `a*`), batted-ball, and expected-stat columns are post-pitch and excluded.
 - `umpire`, `sv_id`, `spin_dir`, `*_deprecated` are empty in 2025 data, therefore excluded. 
